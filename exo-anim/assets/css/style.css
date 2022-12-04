@@ -1,0 +1,343 @@
+
+body{
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.test {
+    background-color: black;
+    color: white;
+
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    font-size: 25px;
+
+    text-align: center;
+    transition: 2s;
+}
+
+.test:hover {
+    height: 900px;
+}
+
+/* .test:not(:hover){
+    height: 40px;
+    transition: 2.5s;
+} */
+
+/* ------------------------------------ */
+
+
+.zone {
+    background-color: grey;
+
+    border-radius: 20px;
+    width: 500px;
+    height: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carreTourne{
+    margin-top: 50px;
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    animation: tourne 2s linear infinite;
+
+}
+
+@keyframes tourne {
+    0% {
+      transform: rotate(0);
+    }
+    25%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: red;
+    }
+    75%{
+        background-color: yellow;
+    }
+    100% {
+      transform: rotate(360deg);
+      background-color: red;
+    }
+}
+
+/* ------------------------------------ */
+
+.zone2{
+    margin-top: 10px;
+}
+
+.zoneDeBalle{
+    width: 40px;
+    height: 250px;
+    border: green solid 2px;
+    display: flex;
+}
+
+.balle{
+    background-color: green;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    animation: rebond 2s linear infinite;
+}
+
+@keyframes rebond {
+    from {}
+     40%  {margin-top: 210px;}
+     60%   {margin-top: 120px;}
+     70%   {margin-top: 210px;}
+     80%   {margin-top: 170px;}
+     100% {margin-top: 210px;}
+}
+
+/* ------------------------------------ */
+
+.zoneRond{
+    display: flex;
+    margin-top: 60px;
+}
+
+.zone3{
+    margin-left: 10px;
+    
+}
+
+.rond {
+    border-radius: 40px;
+    width: 70px;
+    height: 70px;
+    border: 3px solid;
+}
+
+.rond1, .rond2{
+    margin-right: 10px;
+}
+
+.rond1 {
+    animation: rond1Anim 2s linear infinite;
+}
+
+.rond2{
+    animation: rond2Anim 3s linear infinite;
+}
+
+.rond3{
+    animation: rond3Anim 2s linear infinite;
+}
+
+@keyframes rond1Anim {
+    from {background-color: #B9B8B9;}
+     100% {background-color: black;}
+}
+
+@keyframes rond2Anim {
+    from {background-color: #2E2D2E;}
+    50% {background-color: #B9B8B9;}
+     100%  {background-color: rgb(87, 85, 85);}
+}
+
+@keyframes rond3Anim {
+    from {background-color: #747474;}
+    50% {background-color: #b6b6b6;}
+    100% {background-color: black;}
+}
+
+/* ------------------------------------ */
+
+.zone4 {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.titre-flemme{
+    position: absolute;
+    margin-top: 60px;
+}
+
+.zoneDeQueue{
+    /* background-color: red; */
+    width: 490px;
+    height: 330px;
+    position: relative;
+    top: 10px;
+}
+
+.zoneDeQueue h2{
+   position: absolute;
+}
+
+.zoneDeQueue div{
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    position: relative;
+    left: 5px;
+}
+
+.zoneDeQueue div:nth-child(1) {
+    animation: queueAnim 10s infinite linear;
+}
+  
+.zoneDeQueue div:nth-child(2) {
+    animation: queueAnim 10s infinite linear 1s;
+    position: relative;
+    bottom: 20px;
+}
+  
+.zoneDeQueue div:nth-child(3) {
+    animation: queueAnim 10s infinite linear 2s;
+    position: relative;
+    bottom: 40px;
+}
+  
+.zoneDeQueue div:nth-child(4) {
+    animation: queueAnim 10s infinite linear 3s;
+    position: relative;
+    bottom: 60px;
+}
+  
+.zoneDeQueue div:nth-child(5) {
+    animation: queueAnim 10s infinite linear 4s;
+    position: relative;
+    bottom: 80px;
+}
+  
+.zoneDeQueue div:nth-child(6) {
+    animation: queueAnim 10s infinite linear 5s;
+    position: relative;
+    bottom: 100px;
+}
+
+@keyframes queueAnim {
+    20% {
+      transform: translate(465px, 0px) rotate(360deg);
+    }
+    70% {
+      transform: translate(465px, 300px) rotate(720deg);
+    }
+    80% {
+      transform: translate(0px, 300px) rotate(1080deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotate(1440deg);
+    }
+}
+
+/* ------------------------------------ */
+
+.zone5{
+    width: 750px;
+    height: 710px;
+    margin-left: 10px;
+}
+
+.caroussel{
+    width: 150px;
+    height: 20px;
+    background-color: red;
+
+    position: relative;
+    right: 200px;
+    top: 100px;
+
+    animation: carousselAnim 10s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.caroussel div {
+    position: absolute;
+    
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.caroussel div:nth-child(1) {
+    transform: rotateY(0deg) translateZ(100px);
+}
+  
+.caroussel div:nth-child(2) {
+    transform: rotateY(40deg) translateZ(100px);
+}
+  
+.caroussel div:nth-child(3) {
+    transform: rotateY(80deg) translateZ(100px);
+}
+
+.caroussel div:nth-child(4) {
+    transform: rotateY(120deg) translateZ(100px);
+}
+  
+.caroussel div:nth-child(5) {
+    transform: rotateY(160deg) translateZ(100px);
+}
+  
+.caroussel div:nth-child(6) {
+    transform: rotateY(200deg) translateZ(100px);
+}
+  
+.caroussel div:nth-child(7) {
+    transform: rotateY(240deg) translateZ(100px);
+}
+  
+.caroussel div:nth-child(8) {
+    transform: rotateY(280deg) translateZ(100px);
+}
+  
+.caroussel div:nth-child(9) {
+    transform: rotateY(320deg) translateZ(100px);
+}
+
+
+/* L'animation n'est pas identique mais c'est l'idée de la vidéo ;) */
+
+@keyframes carousselAnim {
+    25% {
+      transform: translate(350px, 0px) rotateY(90deg) rotateX(90deg);
+    }
+    50% {
+      transform: translate(350px, 350px) rotateY(180deg) rotateX(180deg);
+    }
+    75% {
+      transform: translate(0px, 350px) rotateY(270deg) rotateX(270deg);
+    }
+    100% {
+      transform: translate(0px, 0px) rotateY(360deg) rotateX(360deg);
+    }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
